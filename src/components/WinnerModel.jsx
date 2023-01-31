@@ -26,5 +26,3 @@ export const WinnerModal = ({ winner, resetGame }) => {
     )
 
 }
-
-    // Verifica si hay un ganador o no y muestra el modal segun correspond
