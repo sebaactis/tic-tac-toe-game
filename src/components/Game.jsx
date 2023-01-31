@@ -1,6 +1,6 @@
 import { Square } from "./Square"
 
-// Renderiza el tablero
+
 export const Game = ({board, updateBoard}) => {
     return (
         <section className="game">

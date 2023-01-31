@@ -1,7 +1,6 @@
 import { TURNS } from "../constants"
 import { Square } from "./Square"
 
-// Renderiza la seccion de turnos
 export const TurnSection = ({turn}) => {
     return (
         <section className="turn">
