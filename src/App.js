@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
+const TURNS = {
+  X: "X",
+  O: "O"
+};
+
+const board = Array(9).fill(null)
+
+
+const Square = ({ children, updateBoard, index }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="square">
+      {children}
     </div>
-  );
+  )
+}
+
+
+function App() {
+
+  return (
+    <main className="board">
+      <h1> TIC TAC TOE</h1>
+      <section className="game">
+        {
+          board.map((_, index) => {
+            return (
+              <Square key={index} index={index}> 
+                {index}
+              </Square>
+            )
+          })
+        }
+      </section>
+    </main>
+  )
+
 }
 
 export default App;
